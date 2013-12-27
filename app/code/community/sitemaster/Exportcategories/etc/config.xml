@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sitemaster_Exportcategories>
+        <version>0.0.1</version>
+        </Sitemaster_Exportcategories>
+	</modules>
+
+	<global>
+        <helpers>
+            <sitemaster_exportcategories>
+                <class>Sitemaster_Exportcategories_Helper</class>
+            </sitemaster_exportcategories>
+        </helpers>
+
+        <blocks>
+            <sitemaster_exportcategories>
+                <class>Sitemaster_Exportcategories_Block</class>
+            </sitemaster_exportcategories>
+		</blocks>
+	</global>
+
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<sitemaster_exportcategories after="Mage_Adminhtml">Sitemaster_Exportcategories_Adminhtml</sitemaster_exportcategories>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+
+	<adminhtml>
+		<layout>
+            <updates>
+                <sitemaster_exportcategories>
+                <file>exportcat/export.xml</file>
+                </sitemaster_exportcategories>
+			</updates>
+		</layout>
+
+		<translate>
+			<modules>
+                <Sitemaster_Exportcategories>
+					<files>
+						<default>Sitemaster_Exportcategories.csv</default>
+					</files>
+                </Sitemaster_Exportcategories>
+			</modules>
+		</translate>
+	</adminhtml>
+
+	<stores>
+		<admin>
+			<design>
+				<package>
+					<name>default</name>
+				</package>
+				<theme>
+					<default>sitemaster</default>
+				</theme>
+			</design>
+		</admin>
+	</stores>
+</config>

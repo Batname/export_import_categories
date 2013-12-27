@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Sitemaster_Importcategories>
+        <version>0.0.1</version>
+        </Sitemaster_Importcategories>
+	</modules>
+
+	<global>
+        <helpers>
+            <sitemaster_importcategories>
+                <class>Sitemaster_Importcategories_Helper</class>
+            </sitemaster_importcategories>
+        </helpers>
+
+        <blocks>
+            <sitemaster_importcategories>
+                <class>Sitemaster_Importcategories_Block</class>
+            </sitemaster_importcategories>
+		</blocks>
+	</global>
+
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<sitemaster_importcategories after="Mage_Adminhtml">Sitemaster_Importcategories_Adminhtml</sitemaster_importcategories>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+
+	<adminhtml>
+		<layout>
+			<updates>
+				<sitemaster_importcategories>
+					<file>exportcat/import.xml</file>
+				</sitemaster_importcategories>
+			</updates>
+		</layout>
+
+		<translate>
+			<modules>
+				<Sitemaster_Importcategories>
+					<files>
+						<default>Sitemaster_Importcategories.csv</default>
+					</files>
+				</Sitemaster_Importcategories>
+			</modules>
+		</translate>
+	</adminhtml>
+
+	<stores>
+		<admin>
+			<design>
+				<package>
+					<name>default</name>
+				</package>
+				<theme>
+					<default>sitemaster</default>
+				</theme>
+			</design>
+		</admin>
+	</stores>
+</config>

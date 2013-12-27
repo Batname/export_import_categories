@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_export_index>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>sitemaster/exportcat/export.css</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="sitemaster_exportcategories/adminhtml_export" name="export_profiles" template="exportcat/export/export.phtml"/>
+        </reference>
+    </adminhtml_export_index>
+</layout>

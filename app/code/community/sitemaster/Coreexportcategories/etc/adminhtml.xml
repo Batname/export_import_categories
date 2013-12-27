@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <sitemaster_coreexportcategories translate="title" module="sitemaster_coreexportcategories">
+                    <title>Export Categories</title>
+                    <sort_order>500</sort_order>
+                </sitemaster_coreexportcategories>
+            </children>
+        </catalog>
+    </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <sitemaster_coreexportcategories translate="title" module="sitemaster_coreexportcategories">
+                        <title>Sitemaster_coreexportcategories</title>
+                    </sitemaster_coreexportcategories>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

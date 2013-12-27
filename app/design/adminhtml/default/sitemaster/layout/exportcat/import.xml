@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_import_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>sitemaster/exportcat/import.css</name></action>
+        </reference>
+        <reference name="content">
+            <block type="sitemaster_importcategories/adminhtml_import" name="import_profiles" template="exportcat/import/import.phtml" />
+        </reference>
+    </adminhtml_import_index>
+    <adminhtml_import_category>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>sitemaster/exportcat/import.css</name></action>
+        </reference>
+        <reference name="content">
+            <block type="sitemaster_importcategories/adminhtml_category_import" name="import_category_profiles" template="exportcat/import/category.phtml" />
+            <block type="sitemaster_importcategories/adminhtml_category_import" name="import_categores_profiles" template="exportcat/import/category/categories.phtml" />
+        </reference>
+    </adminhtml_import_category>
+</layout>
